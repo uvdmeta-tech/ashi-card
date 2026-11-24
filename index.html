@@ -1,0 +1,804 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Thousand Beautiful Reasons 💜</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+ margin:0;
+ min-height:100vh;
+ color:#fff1ff;
+ font-family:Georgia,serif;
+ background:
+ radial-gradient(ellipse at 20% 20%,#56245e,transparent 45%),
+ radial-gradient(ellipse at 80% 80%,#32134e,transparent 50%),
+ linear-gradient(135deg,#100817,#1e0d2b,#080512);
+ overflow-x:hidden;
+}
+
+#stars{
+ position:fixed;inset:0;pointer-events:none;
+ background-image:
+ radial-gradient(2px 2px at 20% 30%,white,transparent),
+ radial-gradient(2px 2px at 80% 20%,#f7caff,transparent),
+ radial-gradient(2px 2px at 40% 70%,white,transparent),
+ radial-gradient(2px 2px at 70% 80%,#d9a2ff,transparent);
+ background-size:180px 180px;
+ animation:twinkle 5s infinite alternate;
+}
+@keyframes twinkle{to{opacity:.25}}
+
+.petal{
+ position:fixed;
+ top:-30px;
+ z-index:2;
+ pointer-events:none;
+ animation:fall linear infinite;
+}
+@keyframes fall{
+ to{transform:translateY(110vh) rotate(600deg)}
+}
+
+main{
+ position:relative;
+ z-index:3;
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ padding:30px 15px 150px;
+}
+
+.page{
+ display:none;
+ width:min(550px,100%);
+ padding:32px 23px;
+ text-align:center;
+ border:1px solid #e7b5ff65;
+ border-radius:25px;
+ background:linear-gradient(145deg,#49234bdc,#170d27f2);
+ box-shadow:0 0 50px #d68aff25;
+ animation:appear .8s;
+}
+
+.page.active{display:block}
+
+@keyframes appear{
+ from{opacity:0;transform:translateY(22px)}
+ to{opacity:1;transform:translateY(0)}
+}
+
+h1{
+ font-size:34px;
+ font-weight:normal;
+ color:#f8d2ff;
+ line-height:1.3;
+}
+
+h2{
+ font-size:25px;
+ color:#f5c5ff;
+ font-weight:normal;
+}
+
+p{
+ font-size:17px;
+ line-height:1.9;
+ color:#f8eafa;
+}
+
+.small{
+ font-size:12px;
+ color:#d8b4df;
+ letter-spacing:2px;
+}
+
+.flower{font-size:65px;margin:15px}
+.big{font-size:55px;margin:15px}
+
+button{
+ border:1px solid #e8c0ff;
+ background:linear-gradient(120deg,#a64dba,#55216c);
+ color:white;
+ padding:13px 25px;
+ border-radius:30px;
+ font-size:15px;
+ margin:12px 5px;
+ cursor:pointer;
+ box-shadow:0 0 22px #d18bff45;
+}
+
+button:active{transform:scale(.96)}
+
+.letter{
+ text-align:left;
+ padding:20px;
+ border-radius:17px;
+ background:#ffffff0b;
+ border:1px solid #d9aaff40;
+}
+
+.letter p{font-size:16px}
+
+.highlight{
+ color:#f9caff;
+ font-style:italic;
+}
+
+.music-dock{
+ display:none;
+ position:fixed;
+ z-index:10;
+ bottom:8px;
+ left:50%;
+ transform:translateX(-50%);
+ width:min(340px,95%);
+ padding:10px;
+ border:1px solid #e4b5ff66;
+ border-radius:18px;
+ background:#170b25ed;
+ text-align:center;
+ box-shadow:0 0 25px #c77bff55;
+}
+
+.music-dock iframe{
+ width:100%;
+ height:105px;
+ border:0;
+ border-radius:10px;
+}
+
+.music-dock p{
+ font-size:12px;
+ margin:3px;
+}
+
+.special-line{
+ margin:25px 0;
+ padding:20px;
+ border-top:1px solid #e8baff55;
+ border-bottom:1px solid #e8baff55;
+ animation:softGlow 3s infinite alternate;
+}
+
+.special-line p{
+ font-size:21px;
+ font-style:italic;
+ color:#ffe0ff;
+}
+
+@keyframes softGlow{
+ from{text-shadow:0 0 4px #d98cff33}
+ to{text-shadow:0 0 18px #e9aaff99}
+}
+
+@media(max-width:400px){
+ h1{font-size:29px}
+ .letter{padding:15px}
+ .letter p{font-size:15px}
+}
+</style>
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div class="music-dock" id="musicDock">
+ <p>♫ OUR SONG — PERFECT BY ED SHEERAN 💜</p>
+ <iframe id="musicFrame"
+ title="Perfect by Ed Sheeran"
+ allow="autoplay; encrypted-media; picture-in-picture"
+ referrerpolicy="strict-origin-when-cross-origin">
+ </iframe>
+</div>
+
+<main>
+
+<!-- PAGE 1 -->
+<section class="page active" id="p0">
+
+ <div class="flower">💜</div>
+ <p class="small">A LITTLE SOMETHING FROM MY HEART</p>
+
+ <h1>For My Beautiful Ashi</h1>
+
+ <p>
+ I made something for you.
+ Not because there is a special occasion,
+ but because sometimes someone deserves
+ to be reminded how special they are.
+ </p>
+
+ <p>And today, that someone is you.</p>
+
+ <h2>Are you ready, my girl? ♡</h2>
+
+ <button onclick="startGift()">Open your gift 💌</button>
+
+ <p class="small">MADE WITH ALL MY HEART</p>
+
+</section>
+
+
+<!-- PAGE 2 -->
+<section class="page" id="p1">
+
+ <div class="big">🌷</div>
+
+ <h1>Look at her...</h1>
+
+ <p>
+ Look at her, the girl who somehow managed
+ to make a place in my heart without
+ even knowing how deeply she would
+ become a part of my thoughts.
+ </p>
+
+ <p>
+ The girl whose smile can change
+ the entire mood of my day.
+ The girl whose little expressions
+ I could admire for hours.
+ </p>
+
+ <p class="highlight">
+ How did someone become this special
+ without even trying?
+ </p>
+
+ <button onclick="go('p2')">Tell me more ♡</button>
+
+</section>
+
+
+<!-- PAGE 3 -->
+<section class="page" id="p2">
+
+ <div class="big">🥺💗</div>
+
+ <h1>Can I confess something?</h1>
+
+ <p>
+ Your eyes, Ashi...
+ I don't think you understand
+ what they do to me.
+ </p>
+
+ <p>
+ Sometimes I imagine just sitting
+ beside you, looking into your eyes,
+ smiling for no reason,
+ and forgetting that the rest
+ of the world even exists.
+ </p>
+
+ <p>
+ And your smile?
+ Please don't stop smiling.
+ I think my heart has developed
+ a very serious weakness for it.
+ </p>
+
+ <p class="highlight">
+ If blushing had a reason,
+ you would be mine.
+ </p>
+
+ <button onclick="go('p3')">There's more, sweetheart</button>
+
+</section>
+
+
+<!-- PAGE 4 -->
+<section class="page" id="p3">
+
+ <div class="flower">🪻</div>
+
+ <h1>Everything about you</h1>
+
+ <p>
+ I adore your kindness.
+ I adore the way your personality
+ makes you different.
+ I adore your little habits,
+ your laugh, your expressions
+ and even the things you don't notice
+ about yourself.
+ </p>
+
+ <p>
+ I love the strong side of you,
+ but I also want to be there
+ for the soft side you don't
+ always show everyone.
+ </p>
+
+ <p>
+ You don't have to be strong
+ around me all the time, my girl.
+ You can just be you.
+ </p>
+
+ <h2>And I adore that girl. 💜</h2>
+
+ <button onclick="go('p4')">Something I dream about...</button>
+
+</section>
+
+
+<!-- PAGE 5 -->
+<section class="page" id="p4">
+
+ <div class="big">🌙</div>
+
+ <h1>Can I hold you close?</h1>
+
+ <p>
+ I dream about those quiet moments
+ when I can hold your hand,
+ pull you gently closer,
+ rest my forehead against yours
+ and just look at you.
+ </p>
+
+ <p>
+ Maybe play our favourite song
+ and dance with you slowly,
+ even if neither of us knows
+ the right steps.
+ </p>
+
+ <p>
+ I want those little moments:
+ your head resting on my shoulder,
+ your hand in mine,
+ your laughter close to me,
+ and a world that feels peaceful
+ because we're together.
+ </p>
+
+ <p class="highlight">
+ I don't need a perfect dance.
+ I'd just want my favourite girl
+ in my arms.
+ </p>
+
+ <button onclick="go('p5')">One promise for you ♡</button>
+
+</section>
+
+
+<!-- PAGE 6 -->
+<section class="page" id="p5">
+
+ <div class="big">🦋</div>
+
+ <h1>On your difficult days</h1>
+
+ <p>
+ I don't want to be someone
+ who only admires your beautiful smile.
+ I want to understand the days
+ when that smile feels difficult.
+ </p>
+
+ <p>
+ When you feel tired,
+ when you doubt yourself,
+ when you feel uncomfortable
+ or when the world becomes too much,
+ I want you to know that
+ you can come to me.
+ </p>
+
+ <p>
+ You don't owe me a smile.
+ You don't have to hide your tears.
+ You don't need to pretend
+ that everything is okay.
+ </p>
+
+ <p class="highlight">
+ Even on your quietest days,
+ you deserve to feel cherished.
+ </p>
+
+ <button onclick="go('p6')">Our little future 💜</button>
+
+</section>
+
+
+<!-- PAGE 7 -->
+<section class="page" id="p6">
+
+ <div class="big">🏡</div>
+
+ <h1>A little dream of ours</h1>
+
+ <p>
+ Someday, I dream of a beautiful room
+ filled with purple lilies.
+ Soft lights, peaceful evenings,
+ our favourite songs,
+ and your laughter filling the room.
+ </p>
+
+ <p>
+ Outside, a little garden full of
+ purple lilies and roses.
+ Somewhere we can sit together,
+ talk about our dreams,
+ share our silly thoughts
+ and watch the evening sky.
+ </p>
+
+ <p>
+ I want to make memories with you
+ that we will remember years later
+ and smile about.
+ </p>
+
+ <p class="highlight">
+ Not a perfect fairytale.
+ Just a beautiful life,
+ built with love, patience and trust.
+ </p>
+
+ <button onclick="go('p7')">Read my heart, Ashi 💌</button>
+
+</section>
+
+
+<!-- PAGE 8: LONG LETTER -->
+<section class="page" id="p7">
+
+ <div class="big">💌</div>
+
+ <h1>To my lovely Ashi</h1>
+
+ <div class="letter">
+
+ <p>My dearest Ashi, 💜</p>
+
+ <p>
+ I wish I could sit beside you while
+ you read this. I would probably
+ be smiling like an idiot,
+ watching your expressions
+ and secretly hoping that
+ these words make you blush.
+ </p>
+
+ <p>
+ I don't think you realise how
+ beautiful you are to me.
+ And I'm not talking only about
+ your appearance.
+ I'm talking about your heart,
+ your kindness, your personality,
+ your laughter and all those
+ little things that make you
+ the girl I admire so much.
+ </p>
+
+ <p>
+ If I could, I would let you
+ see yourself through my eyes
+ for just one minute.
+ Maybe then you would understand
+ why I find your smile so precious,
+ why your eyes make me forget
+ what I was about to say,
+ and why your presence can
+ make an ordinary moment
+ feel unforgettable.
+ </p>
+
+ <p>
+ Sometimes I imagine you sitting
+ beside me, your head resting
+ on my shoulder, my hand gently
+ holding yours, while Perfect
+ plays somewhere in the background.
+ I would look at you and probably
+ think, "How did I get so lucky
+ to share this moment with her?"
+ </p>
+
+ <p>
+ And if you ever feel insecure,
+ please don't compare yourself
+ with another girl.
+ I don't want a copy of anyone.
+ I don't want a more perfect version
+ of you.
+ I want you to see the beauty
+ in the person you already are.
+ </p>
+
+ <p>
+ I want to know your dreams,
+ your little fears, your favourite
+ memories and even the random
+ thoughts that cross your mind.
+ I want to hear about your day,
+ even if nothing interesting happened.
+ Because when it comes to you,
+ even the smallest details
+ matter to me.
+ </p>
+
+ <p>
+ I want to hold you close
+ after a long day and remind you
+ that you can breathe,
+ relax and let the world wait
+ for a little while.
+ I want to brush the hair away
+ from your face, look into your eyes
+ and tell you how beautiful you are.
+ And if you get shy,
+ well... I might just smile
+ a little more.
+ </p>
+
+ <p>
+ I know I am not perfect.
+ I might make mistakes,
+ sometimes struggle to express myself
+ and still have a lot to learn.
+ But I want to keep becoming
+ someone who makes you feel
+ respected, understood and appreciated.
+ I want my actions to be as
+ beautiful as my promises.
+ </p>
+
+ <p>
+ And Ashi, I hope we get to
+ experience those simple dreams:
+ a room full of purple lilies,
+ slow dances, long conversations,
+ sleepy evenings, silly jokes
+ and countless memories.
+ I hope we get to grow together
+ while still becoming our own
+ beautiful selves.
+ </p>
+
+ <p>
+ If I could choose one little gift
+ for you, it wouldn't be flowers,
+ jewellery or anything expensive.
+ It would be the ability to see
+ yourself the way I see you,
+ even on the days when you
+ don't feel beautiful.
+ </p>
+
+ <p>
+ I would choose your smile
+ on a thousand ordinary mornings.
+ I would choose your laughter
+ on a thousand quiet evenings.
+ And I would choose the opportunity
+ to keep discovering new little
+ things about you.
+ </p>
+
+ <p>
+ I cannot tell you exactly
+ what every chapter of the future
+ will look like.
+ But I can tell you that I want
+ to fill the chapters we share
+ with honesty, tenderness,
+ laughter and beautiful memories.
+ </p>
+
+ <p>
+ So whenever you hear our song,
+ I hope you remember this:
+ somewhere in this world,
+ there is someone who thinks
+ your existence is a beautiful thing.
+ </p>
+
+ <p>
+ Keep blooming, my purple lily.
+ Keep smiling, my favourite girl.
+ And please never forget
+ how precious you are.
+ </p>
+
+ <p>
+ With all the warmth in my heart,
+ <br>
+ Your person, who wishes
+ to keep making you blush. 💜
+ </p>
+
+ </div>
+
+ <button onclick="go('special')">
+ A little promise for you 💜
+ </button>
+
+</section>
+
+
+<!-- SPECIAL PAGE -->
+<section class="page" id="special">
+
+ <div class="big">🪻</div>
+
+ <p class="small">A PROMISE FROM MY HEART</p>
+
+ <h1>In a Thousand Mornings...</h1>
+
+ <div class="special-line">
+
+ <p>
+ I would choose your smile
+ on a thousand ordinary mornings...
+ </p>
+
+ <p>
+ And your laughter
+ on a thousand quiet evenings.
+ </p>
+
+ <p>
+ I would choose your hand
+ in every beautiful moment,
+ and your presence
+ in every little dream.
+ </p>
+
+ <h2>Again, and again, and again. 💜</h2>
+
+ </div>
+
+ <div class="flower">🌷💜🌷</div>
+
+ <p>
+ Because even an ordinary lifetime
+ would feel extraordinary
+ with you beside me.
+ </p>
+
+ <button onclick="go('p8')">
+ One last confession, Ashi ♡
+ </button>
+
+</section>
+
+
+<!-- FINAL PAGE -->
+<section class="page" id="p8">
+
+ <div class="big">💜🌷</div>
+
+ <p class="small">MY FINAL WORDS FOR YOU</p>
+
+ <h1>Ashi, can I tell you something?</h1>
+
+ <p>
+ If I had a thousand lifetimes
+ and a thousand chances
+ to discover something beautiful,
+ I would still hope that
+ one of those chances leads me to you.
+ </p>
+
+ <p>
+ I would still want to hear your laugh,
+ see your smile,
+ hold your hand
+ and discover all the little things
+ that make you who you are.
+ </p>
+
+ <h2>
+ You are my favourite thought
+ in the middle of an ordinary day.
+ </h2>
+
+ <p>
+ And if I could make one wish,
+ it would be that you never
+ forget how deeply you deserve
+ to be loved, respected
+ and cherished.
+ </p>
+
+ <div class="flower">🪻💗🪻</div>
+
+ <h1>Keep blooming, my Ashi.</h1>
+
+ <h2>My beautiful girl. 💜</h2>
+
+ <p class="small">
+ A THOUSAND BEAUTIFUL REASONS
+ <br>
+ MADE ONLY FOR ASHI
+ </p>
+
+ <button onclick="go('p0')">
+ Read our little story again ♡
+ </button>
+
+</section>
+
+</main>
+
+
+<script>
+
+// PAGE NAVIGATION
+function go(id){
+ document.querySelectorAll('.page').forEach(p=>{
+  p.classList.remove('active');
+ });
+
+ document.getElementById(id).classList.add('active');
+
+ window.scrollTo({
+  top:0,
+  behavior:'smooth'
+ });
+}
+
+
+// START MUSIC AFTER FIRST TAP
+let musicStarted=false;
+
+function startGift(){
+
+ go('p1');
+
+ if(!musicStarted){
+
+  musicStarted=true;
+
+  document.getElementById('musicDock').style.display='block';
+
+  document.getElementById('musicFrame').src=
+  'https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&controls=1&rel=0';
+
+ }
+
+}
+
+
+// FLOATING PURPLE PETALS
+for(let i=0;i<30;i++){
+
+ const e=document.createElement('div');
+
+ e.className='petal';
+
+ e.innerHTML=['💜','🌸','🪻','✨','♡'][i%5];
+
+ e.style.left=Math.random()*100+'%';
+
+ e.style.animationDuration=(8+Math.random()*14)+'s';
+
+ e.style.animationDelay=(-Math.random()*15)+'s';
+
+ e.style.fontSize=(12+Math.random()*17)+'px';
+
+ document.body.appendChild(e);
+
+}
+
+</script>
+
+</body>
+</html>
